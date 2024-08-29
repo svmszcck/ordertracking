@@ -30,7 +30,7 @@ const HomeView: FC<HomeViewProps> = ({ signIn }) => {
 
           <hr className="divider" color={Colors.GRAY_DARK}></hr>
 
-          <Link className="link-1" to={`${Routes.Order}/123`}>
+          <Link className="link-1" to={`${Routes.ORDER}/123`}>
             <Button text="Track" onClick={signIn} fullWidth />
           </Link>
         </Card>

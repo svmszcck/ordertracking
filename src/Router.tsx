@@ -6,8 +6,8 @@ import { Home, Order } from "pages";
 import { AuthContext } from "contexts/authContext";
 
 export const enum Routes {
-  Home = "/",
-  Order = "/orders",
+  HOME = "/",
+  ORDER = "/orders",
 }
 
 const Layout = () => {
@@ -16,10 +16,8 @@ const Layout = () => {
 
   const signOut = () => {
     setSignedIn(false);
-    navigate(Routes.Home);
+    navigate(Routes.HOME);
   };
-
-  console.log("signedIn: ", signedIn);
 
   return (
     <>
@@ -34,11 +32,11 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: Routes.Home,
+        path: Routes.HOME,
         element: <Home />,
       },
       {
-        path: `${Routes.Order}/:id`,
+        path: `${Routes.ORDER}/:id`,
         element: <Order />,
       },
     ],
