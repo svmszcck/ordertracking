@@ -28,7 +28,7 @@
 
 - I have added a global Error Boundary to catch global errors in the app(React Router library provides a default one though).
 
-- I am using tracking_number property for the Order Number input field. It is a little bit confusing because there are tracking_number and orderNo properties in the response object. I have preferred to use the tracking_number property for the Order Number as it is also unique per order.
+- I am using **tracking_number** property for the Order Number input field. It is a little bit confusing because there are **tracking_number** and **orderNo** properties in the response object. I have preferred to use the **tracking_number** property for the Order Number as it is also unique per order.
 
 So you can try this combination:
 
