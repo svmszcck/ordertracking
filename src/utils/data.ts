@@ -12,9 +12,10 @@ export const paginate = (
 
 export const progress = (status: OrderStatus): number => {
   if (status === OrderStatus.COLLECTION) return 100;
-  else if (status === OrderStatus.FAILED_DELIVERY) return 75;
-  else if (status === OrderStatus.TRANSIT) return 50;
-  else if (status === OrderStatus.REGISTERED) return 25;
+  else if (status === OrderStatus.FAILED_DELIVERY) return 80;
+  else if (status === OrderStatus.TRANSIT) return 60;
+  else if (status === OrderStatus.DELIVERY_DATE_SET) return 40;
+  else if (status === OrderStatus.REGISTERED) return 20;
 
   return 0;
 };
