@@ -8,6 +8,7 @@ import HomeView from "./view";
 const Home = () => {
   const [orderNumber, setOrderNumber] = useState<string | undefined>();
   const [zipCode, setZipCode] = useState<string | undefined>();
+  const [warning, showWarning] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const signIn = async () => {
@@ -15,7 +16,12 @@ const Home = () => {
 
     const order = await getOrder(orderNumber, zipCode);
 
-    if (!order) return;
+    if (!order) {
+      showWarning(true);
+      setOrderNumber(undefined);
+      setZipCode(undefined);
+      return;
+    }
 
     navigate(`${Routes.ORDER}/${orderNumber}/?zip=${zipCode}`);
   };
@@ -23,8 +29,17 @@ const Home = () => {
   return (
     <HomeView
       signIn={signIn}
-      setOrderNumber={setOrderNumber}
-      setZipCode={setZipCode}
+      setOrderNumber={(value) => {
+        showWarning(false);
+        setOrderNumber(value);
+      }}
+      setZipCode={(value) => {
+        showWarning(false);
+        setZipCode(value);
+      }}
+      orderNumber={orderNumber}
+      zipCode={zipCode}
+      warning={warning}
     />
   );
 };

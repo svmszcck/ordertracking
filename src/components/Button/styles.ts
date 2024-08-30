@@ -52,8 +52,7 @@ const Styled = styled.button<StyledProps>`
   outline-offset: 0.3rem;
   ${(props) => parseButtonStyle(props.variant)}
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.8;
   }
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { device } from "globalStyles";
+import Colors from "constants/colors";
 
 const Styled = styled.div`
   display: flex;
@@ -32,6 +33,11 @@ const Styled = styled.div`
       .form-info {
         text-align: center;
         margin-bottom: 2rem;
+      }
+
+      .warning {
+        color: ${Colors.RED};
+        margin-top: 2rem;
       }
 
       .divider {

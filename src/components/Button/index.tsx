@@ -5,10 +5,10 @@ import Styled from "./styles";
 export type ButtonVariants = "primary" | "outline" | "plain";
 
 type ButtonProps = {
-  variant?: ButtonVariants;
   className?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
   text: string;
+  variant?: ButtonVariants;
   $fullWidth?: boolean;
   ariaLabel?: string;
 };
