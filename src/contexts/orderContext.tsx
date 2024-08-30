@@ -2,12 +2,14 @@ import React, { useState, FC, PropsWithChildren } from "react";
 
 import { Order } from "services/types/Order";
 
-const orderState: {
+type OrderState = {
   order: Order | null;
   setOrder: (data: Order | null) => void;
   loading: boolean;
   setLoading: (value: boolean) => void;
-} = {
+};
+
+const orderState: OrderState = {
   order: null,
   setOrder: (data: Order | null) => {},
   loading: true,
