@@ -28,11 +28,20 @@
 
 - I have added a global Error Boundary to catch global errors in the app(React Router library provides a default one though).
 
+- I am using tracking_number property for the Order Number input field. It is a little bit confusing because there are tracking_number and orderNo properties in the response object. I have preferred to use the tracking_number property for the Order Number as it is also unique per order.
+
+So you can try this combination:
+
+Order Number: 74328923203
+Zip Code: 81371
+
+It will fetch the order with id of 3.
+
 **What can be improved?:**
 
 - I could use a CSS pattern(or naming convention) like BEM. However I choosed to be more flexible about class names. For a bigger project it makes sense to use BEM pattern because it makes it easy to read and maintain CSS code. BEM also encourages the use of descriptive class names, which make it easy to understand the purpose of each CSS rule.
 
-- There are unused propertes in the Order data. They should be eliminated with a parser function to reduce the memory usage. I haven't done that to make the app scalable(those unused properties can be used in the future).
+- There are unused propertes in the Order data. They should be eliminated with a parser function to reduce the memory usage. For example email, recipient, recipient_notification properties aren't used at the moment. I haven't done that to make the app scalable(those unused properties can be used in the future).
 
 - Risks with the current solution in terms of business vaulue and UX: There are some external dependencies and it is not easy to isolate the Order Status view if we want to use it in a different project & platform. It should be as lean as possible and we should be able to use it as a plugin in another environment.
 
