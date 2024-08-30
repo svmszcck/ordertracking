@@ -4,14 +4,16 @@ import "@testing-library/jest-dom";
 import { Input } from "components";
 
 describe("Input Component", () => {
-  it("handles input correctly", () => {
+  it("handles state changes correctly", async () => {
     const onChange = jest.fn();
 
-    render(<Input label="Blablabla" onChange={onChange} />);
+    render(<Input label="Blablabla" onChange={onChange} value="input value" />);
 
     expect(screen.getByText("Blablabla")).toBeTruthy();
 
-    const textInput = screen.getByTestId("text-input");
+    const textInput = screen.getByTestId("text-input") as HTMLInputElement;
+
+    expect(textInput).toHaveDisplayValue("input value");
 
     fireEvent.change(textInput, {
       target: { value: "new value" },
