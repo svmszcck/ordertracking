@@ -36,7 +36,7 @@
 
 - Order Status View could be implemented as an isolated environment which can be used as a plugin in different e-commerce platforms. It should be developed as a standalone Web Component. In order to do that it should be implemented in a way that it doesn't depend on external components or libraries and it should be customizable & open to extension. There should be a customization layer for the plugin. It can be done via a regular Javascript Object or JSON. The plugin should be themable and the colors, fonts, spaces should be customizable by the customization layer.
 
-These are the steps which should be followed to be able to create this plugin:
+⭐ These are the steps which should be followed to be able to create this plugin:
 
 **1. Defining the core requirements:**
 
