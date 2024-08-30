@@ -18,7 +18,7 @@
 
 **Details:**
 
-- I have used **"Container-Presentational Pattern"**. Because I love this pattern as it seperates the business logic from the UI part. It is easier to maintain the code and it provides more scalability even though this is a small project.
+- I have used **"Container-Presentational"** pattern. Because I love this pattern as it seperates the business logic from the UI part. It is easier to maintain the code and it provides more scalability even though this is a small project.
 
 - I have also separated services & constants & config variables from the component files.
 
