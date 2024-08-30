@@ -32,6 +32,8 @@
 
 - I could use a CSS pattern(or naming convention) like BEM. However I choosed to be more flexible about class names. For a bigger project it makes sense to use BEM pattern because it makes it easy to read and maintain CSS code. BEM also encourages the use of descriptive class names, which make it easy to understand the purpose of each CSS rule.
 
+- There are unused propertes in the Order data. They should be eliminated with a parser function to reduce the memory usage. I haven't done that to make the app scalable(those unused properties can be used in the future).
+
 - Risks with the current solution in terms of business vaulue and UX: There are some external dependencies and it is not easy to isolate the Order Status view if we want to use it in a different project & platform. It should be as lean as possible and we should be able to use it as a plugin in another environment.
 
 - Order Status View could be implemented as an isolated environment which can be used as a plugin in different e-commerce platforms. It should be developed as a standalone Web Component. In order to do that it should be implemented in a way that it doesn't depend on external components or libraries and it should be customizable & open to extension. There should be a customization layer for the plugin. It can be done via a regular Javascript Object or JSON. The plugin should be themable and the colors, fonts, spaces should be customizable by the customization layer.
