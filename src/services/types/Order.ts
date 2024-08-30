@@ -1,4 +1,4 @@
-enum OrderStatus {
+export enum OrderStatus {
   REGISTERED = "Registered",
   DELIVERY_DATE_SET = "New delivery date set",
   COLLECTION = "Ready for collection",
@@ -6,7 +6,7 @@ enum OrderStatus {
   TRANSIT = "In transit",
 }
 
-type Article = {
+export type Article = {
   articleNo: string;
   articleName: string;
   articleImageUrl: string;
@@ -26,6 +26,11 @@ export type Order = {
     status: OrderStatus;
     country_iso3: string;
     city: string;
+    meta?: {
+      pickup_address: string;
+      pickup_address_link: string;
+      pickup_address_map_url: string;
+    };
   }>;
   delivery_info: {
     articles: Array<Article>;

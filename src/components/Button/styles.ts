@@ -5,7 +5,7 @@ import { ButtonVariants } from ".";
 
 type StyledProps = {
   variant?: ButtonVariants;
-  fullWidth?: boolean;
+  $fullWidth?: boolean;
 };
 
 const parseButtonStyle = (variant?: ButtonVariants) => {
@@ -21,10 +21,17 @@ const parseButtonStyle = (variant?: ButtonVariants) => {
         background-color: transparent;
         border: 2px solid ${Colors.PRIMARY};
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: ${Colors.PRIMARY};
           color: ${Colors.WHITE};
         }
+      `;
+    case "plain":
+      return css`
+        background-color: transparent;
+        font-weight: 400;
+        opacity: 0.5;
       `;
     default:
       return css`
@@ -36,15 +43,17 @@ const parseButtonStyle = (variant?: ButtonVariants) => {
 
 const Styled = styled.button<StyledProps>`
   cursor: pointer;
-  width: ${(props) => (props.fullWidth ? "100%" : "auto")};
+  width: ${(props) => (props.$fullWidth ? "100%" : "auto")};
   height: 2.5rem;
   border: none;
   border-radius: 8px;
-  ${(props) => parseButtonStyle(props.variant)}
   font-weight: bold;
   font-size: 1rem;
+  outline-offset: 0.3rem;
+  ${(props) => parseButtonStyle(props.variant)}
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 `;

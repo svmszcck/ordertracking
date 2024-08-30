@@ -10,14 +10,14 @@ export type TagVariants =
   | "h3"
   | "h4"
   | "h5"
-  | "h6"
-  | "pre";
+  | "h6";
 
 type TypographyProps = {
   tag?: TagVariants;
   className?: string;
   children: ReactNode;
   pale?: boolean;
+  bold?: boolean;
 };
 
 const Typography = ({
@@ -25,15 +25,11 @@ const Typography = ({
   className,
   children,
   pale,
+  bold,
   ...props
 }: TypographyProps & CSSProperties) => {
   return (
-    <Styled
-      tag={tag}
-      className={className}
-      pale={pale}
-      data-testid="typography"
-    >
+    <Styled tag={tag} className={className} pale={pale} bold={bold}>
       {children}
     </Styled>
   );

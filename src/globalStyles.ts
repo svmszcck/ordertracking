@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -15,6 +15,16 @@ export const GlobalStyle = createGlobalStyle`
         background: linear-gradient(180deg, rgba(229,240,253,1) 0%, rgba(237,245,254,1) 35%, rgba(252,253,255,1) 100%);
         background-attachment: fixed;
     }
+    
+    .clickable {
+      cursor: pointer;
+    }
+`;
+
+export const subInfo = css`
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 `;
 
 interface Size {

@@ -27,7 +27,7 @@ const Styled = styled.div`
     }
 
     .form {
-      padding-top: 2rem;
+      padding: 2rem;
 
       .form-info {
         text-align: center;

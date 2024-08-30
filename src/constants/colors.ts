@@ -5,6 +5,7 @@ enum colors {
   BLACK = "#000000",
   GRAY = "#FAFAFA",
   GRAY_DARK = "#E7E7E7",
+  GRAY_DARKER = "#A5A5A5",
 }
 
 export default colors;

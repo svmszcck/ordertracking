@@ -3,7 +3,7 @@ import { createBrowserRouter, useNavigate, Outlet } from "react-router-dom";
 
 import { Header } from "components";
 import { Home, Order } from "pages";
-import { AuthContext } from "contexts/authContext";
+import { OrderContext, OrderContextProvider } from "contexts/orderContext";
 
 export const enum Routes {
   HOME = "/",
@@ -11,17 +11,17 @@ export const enum Routes {
 }
 
 const Layout = () => {
-  const { signedIn, setSignedIn } = useContext(AuthContext);
+  const { order, setOrder } = useContext(OrderContext);
   const navigate = useNavigate();
 
   const signOut = () => {
-    setSignedIn(false);
+    setOrder(null);
     navigate(Routes.HOME);
   };
 
   return (
     <>
-      {signedIn && <Header signOut={signOut} />}
+      {order && <Header signOut={signOut} />}
       <Outlet />
     </>
   );
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: `${Routes.ORDER}/:id`,
+        path: `${Routes.ORDER}/:orderNumber`,
         element: <Order />,
       },
     ],

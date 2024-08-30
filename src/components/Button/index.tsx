@@ -2,14 +2,14 @@ import React, { MouseEventHandler } from "react";
 
 import Styled from "./styles";
 
-export type ButtonVariants = "primary" | "outline";
+export type ButtonVariants = "primary" | "outline" | "plain";
 
 type ButtonProps = {
   variant?: ButtonVariants;
   className?: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
   text: string;
-  fullWidth?: boolean;
+  $fullWidth?: boolean;
   ariaLabel?: string;
 };
 
@@ -18,7 +18,7 @@ const Button = ({
   className,
   onClick,
   text,
-  fullWidth,
+  $fullWidth,
   ariaLabel,
 }: ButtonProps) => {
   return (
@@ -26,9 +26,9 @@ const Button = ({
       variant={variant}
       className={className}
       onClick={onClick}
-      data-testid="search-button"
+      data-testid="custom-button"
       aria-label={ariaLabel}
-      fullWidth={fullWidth}
+      $fullWidth={$fullWidth}
     >
       <span>{text}</span>
     </Styled>

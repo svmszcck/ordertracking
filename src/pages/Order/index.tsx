@@ -1,14 +1,12 @@
-import { useEffect } from "react";
+import { useOrder } from "hooks/useOrder";
 
-import { getOrder } from "services/orderService";
 import OrderView from "./view";
+import Loader from "components/Loader";
 
 const Order = () => {
-  useEffect(() => {
-    getOrder("AB20221219", "60156");
-  }, []);
+  const { order, loading } = useOrder();
 
-  return <OrderView />;
+  return !order && loading ? <Loader /> : <OrderView />;
 };
 
 export default Order;

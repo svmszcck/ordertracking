@@ -8,6 +8,7 @@ type StyledProps = {
   children: ReactNode;
   className?: string;
   pale?: boolean;
+  bold?: boolean;
 };
 
 function parseTypographyStyle(tag: TagVariants) {
@@ -40,12 +41,6 @@ function parseTypographyStyle(tag: TagVariants) {
       return css`
         font-size: 1rem;
       `;
-    case "pre":
-      return css`
-        font-family: inherit;
-        white-space: pre-wrap;
-        margin: 0;
-      `;
     default:
       return css`
         font-size: 1rem;
@@ -57,7 +52,8 @@ const Styled = styled(({ tag, children, className }: StyledProps) =>
   createElement(tag, { className }, children)
 )`
   ${({ tag }) => parseTypographyStyle(tag)}
-  font-weight: ${({ pale }) => (pale ? 100 : "inherit")}
+  font-weight: ${({ bold }) => (bold ? 500 : "inherit")};
+  opacity: ${({ pale }) => (pale ? 0.5 : "inherit")};
 `;
 
 export default Styled;

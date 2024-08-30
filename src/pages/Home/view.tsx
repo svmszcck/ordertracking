@@ -9,9 +9,15 @@ import Styled from "./styles";
 
 type HomeViewProps = {
   signIn: () => void;
+  setOrderNumber: (value: string) => void;
+  setZipCode: (value: string) => void;
 };
 
-const HomeView: FC<HomeViewProps> = ({ signIn }) => {
+const HomeView: FC<HomeViewProps> = ({
+  signIn,
+  setOrderNumber,
+  setZipCode,
+}) => {
   return (
     <Styled>
       <div className="form-wrapper">
@@ -25,14 +31,12 @@ const HomeView: FC<HomeViewProps> = ({ signIn }) => {
             </Typography>
           </div>
 
-          <Input label="Order Number" />
-          <Input label="Zip Code" />
+          <Input label="Order Number" onChange={setOrderNumber} />
+          <Input label="Zip Code" onChange={setZipCode} />
 
           <hr className="divider" color={Colors.GRAY_DARK}></hr>
 
-          <Link className="link-1" to={`${Routes.ORDER}/123`}>
-            <Button text="Track" onClick={signIn} fullWidth />
-          </Link>
+          <Button text="Track" onClick={signIn} $fullWidth />
         </Card>
       </div>
     </Styled>

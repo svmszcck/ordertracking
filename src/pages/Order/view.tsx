@@ -1,4 +1,4 @@
-import { Card, Typography } from "components";
+import { Card } from "components";
 
 import Status from "./Status";
 import Shipment from "./Shipment";
@@ -9,28 +9,13 @@ const Order = () => {
   return (
     <Styled>
       <div className="wrapper">
-        <Card>
-          <Typography tag="h2" className="title">
-            Ready for collection
-          </Typography>
-
-          <Typography tag="h5">
-            The goods will be ready for collection on the next working day.
-          </Typography>
-
+        <Card className="order-card">
           <Status />
         </Card>
-        <Card>
-          <Typography tag="h5" className="title">
-            Shipping updates
-          </Typography>
-
+        <Card className="order-card">
           <Shipment />
         </Card>
-        <Card>
-          <Typography tag="h5" className="title">
-            Articles
-          </Typography>
+        <Card className="order-card">
           <Article />
         </Card>
       </div>
