@@ -32,10 +32,7 @@
 
 So you can try this combination:
 
-Order Number: 74328923203
-
-##
-
+Order Number: 74328923203<br/>
 Zip Code: 81371
 
 It will fetch the order with id of 3.
