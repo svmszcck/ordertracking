@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     
     .clickable {
       cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 `;
 

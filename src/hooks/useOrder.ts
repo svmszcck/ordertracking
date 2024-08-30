@@ -16,13 +16,17 @@ export const useOrder = () => {
     const zipCode = searchParams.get("zip");
 
     if (orderNumber && zipCode) {
-      getOrder(orderNumber, zipCode).then((data) => {
-        setLoading(false);
-        if (!data) navigate(Routes.HOME);
-        else {
-          setOrder(data || null);
-        }
-      });
+      getOrder(orderNumber, zipCode)
+        .then((data) => {
+          setLoading(false);
+          if (!data) navigate(Routes.HOME);
+          else {
+            setOrder(data || null);
+          }
+        })
+        .catch(() => {
+          navigate(Routes.HOME);
+        });
     }
   }, [orderNumber, searchParams, navigate, order, setLoading, setOrder]);
 

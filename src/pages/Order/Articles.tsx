@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Image, Typography } from "components";
 import { OrderContext } from "contexts/orderContext";
 
-const Article = () => {
+const Articles = () => {
   const { order } = useContext(OrderContext);
 
   return order ? (
@@ -33,4 +33,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default Articles;

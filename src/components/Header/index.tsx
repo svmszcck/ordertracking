@@ -9,7 +9,7 @@ type HeaderProps = {
 const Header = ({ signOut }: HeaderProps) => {
   return (
     <Styled>
-      <img src={Logo} width={60} alt="logo" />
+      <img src={Logo} width={60} alt="logo" className="clickable" />
       <Button
         text="Sign Out"
         onClick={signOut}

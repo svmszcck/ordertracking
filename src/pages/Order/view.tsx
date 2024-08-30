@@ -2,7 +2,7 @@ import { Card } from "components";
 
 import Status from "./Status";
 import Shipment from "./Shipment";
-import Article from "./Article";
+import Articles from "./Articles";
 import Styled from "./styles";
 
 const Order = () => {
@@ -16,7 +16,7 @@ const Order = () => {
           <Shipment />
         </Card>
         <Card className="order-card">
-          <Article />
+          <Articles />
         </Card>
       </div>
     </Styled>
