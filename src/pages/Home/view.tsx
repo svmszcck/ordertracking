@@ -4,6 +4,7 @@ import { Button, Card, Input, Typography } from "components";
 import Colors from "constants/colors";
 import Logo from "images/logo.png";
 import Styled from "./styles";
+import { Warning } from ".";
 
 type HomeViewProps = {
   signIn: () => void;
@@ -11,7 +12,7 @@ type HomeViewProps = {
   setZipCode: (value: string) => void;
   orderNumber: string | undefined;
   zipCode: string | undefined;
-  warning: boolean;
+  warning: Warning | undefined;
 };
 
 const HomeView: FC<HomeViewProps> = ({
@@ -44,7 +45,7 @@ const HomeView: FC<HomeViewProps> = ({
 
           {warning && (
             <Typography tag="p" className="warning">
-              Order couldn't be found. Please try again.
+              {warning}
             </Typography>
           )}
 
