@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 import { usePagination } from "hooks/usePagination";
 import { OrderContext } from "contexts/orderContext";
 import type { Order } from "services/types/Order";
-import { order } from "../test_data";
+import { order } from "mock_data";
 
 describe("usePagination hook", () => {
   it("paginates order data correctly", async () => {
