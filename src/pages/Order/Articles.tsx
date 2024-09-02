@@ -1,17 +1,23 @@
 import { useContext } from "react";
 
-import { Image, Typography } from "components";
+import { Button, Image, Typography } from "components";
+import { usePagination } from "hooks/usePagination";
+import type { Order } from "services/types/Order";
 import { OrderContext } from "contexts/orderContext";
 
 const Articles = () => {
   const { order } = useContext(OrderContext);
+  const { loadMore, paginatedData } = usePagination(
+    order?.delivery_info.articles,
+    5
+  );
 
   return order ? (
     <div className="articles">
       <Typography tag="h5" className="title">
         Articles
       </Typography>
-      {order.delivery_info.articles.map((article) => (
+      {(paginatedData as Order["delivery_info"]["articles"]).map((article) => (
         <div className="article" key={article.articleNo}>
           <Image
             src={article.articleImageUrl}
@@ -27,6 +33,15 @@ const Articles = () => {
           </div>
         </div>
       ))}
+
+      {paginatedData.length < order.delivery_info.articles.length && (
+        <Button
+          onClick={loadMore}
+          className="load-more"
+          text="More"
+          variant="plain"
+        />
+      )}
     </div>
   ) : (
     <div>There is no data!</div>

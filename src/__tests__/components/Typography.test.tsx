@@ -13,7 +13,7 @@ describe("Typography Component", () => {
     expect(element.tagName).toBe("P");
 
     render(
-      <Typography tag="h4" className="testClass">
+      <Typography tag="h4" className="testClass" pale bold>
         Dummy Text 2
       </Typography>
     );
@@ -22,5 +22,7 @@ describe("Typography Component", () => {
 
     expect(element.tagName).toBe("H4");
     expect(element).toHaveClass("testClass");
+    expect(element).toHaveStyle(`opacity: 0.5`);
+    expect(element).toHaveStyle(`font-weight: 500`);
   });
 });

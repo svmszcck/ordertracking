@@ -48,11 +48,43 @@ export const order = {
     articles: [
       {
         articleNo: "AB30M216",
-        articleName: "Macbook Pro M2 Max 16inch",
+        articleName: "Hhejkrhkjwe",
         articleImageUrl:
           "https://images.unsplash.com/photo-1639249227523-78502e9bb8b7",
         quantity: 1,
         price: 4199.0,
+      },
+      {
+        articleNo: "AB30M217",
+        articleName: "Hgghjghjwer",
+        articleImageUrl:
+          "https://images.unsplash.com/photo-1639249227523-78502e9bb8b7",
+        quantity: 1,
+        price: 3500.0,
+      },
+      {
+        articleNo: "AB30M218",
+        articleName: "Hjewkjrhwer",
+        articleImageUrl:
+          "https://images.unsplash.com/photo-1639249227523-78502e9bb8b7",
+        quantity: 2,
+        price: 4199.0,
+      },
+      {
+        articleNo: "AB30M219",
+        articleName: "Bnjdfhjhejr",
+        articleImageUrl:
+          "https://images.unsplash.com/photo-1639249227523-78502e9bb8b7",
+        quantity: 2,
+        price: 4199.0,
+      },
+      {
+        articleNo: "AB30M220",
+        articleName: "Vbndvfbnsdf",
+        articleImageUrl:
+          "https://images.unsplash.com/photo-1639249227523-78502e9bb8b7",
+        quantity: 1,
+        price: 2000.0,
       },
     ],
     orderNo: "0000RTAB3",

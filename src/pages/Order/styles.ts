@@ -71,7 +71,7 @@ const Styled = styled.div`
               opacity: 0.9;
             }
 
-            &:focus {
+            &:focus-visible {
               background-color: ${Colors.SECONDARY};
               color: ${Colors.BLACK};
               outline-color: transparent;
@@ -112,6 +112,8 @@ const Styled = styled.div`
       }
 
       .articles {
+        display: flex;
+        flex-direction: column;
         padding: 2rem;
 
         .article {

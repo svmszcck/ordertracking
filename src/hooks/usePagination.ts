@@ -1,25 +1,23 @@
-import { useState, useContext, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 import { paginate } from "utils/data";
-import { OrderContext } from "contexts/orderContext";
 
-const PAGE_SIZE = 3;
-
-export const usePagination = () => {
-  const { order } = useContext(OrderContext);
-
+export const usePagination = (
+  data: unknown[] | undefined,
+  pageSize: number = 3
+) => {
   const [page, setPage] = useState(1);
 
   const paginatedData = useMemo(
-    () => paginate(order?.checkpoints, PAGE_SIZE, page),
-    [order, page]
+    () => paginate(data, pageSize, page),
+    [data, page, pageSize]
   );
 
   const loadMore = () => {
-    if (!order) return;
+    if (!data) return;
 
-    if ((page + 1) * PAGE_SIZE > order.checkpoints.length) setPage(page + 1);
+    if ((page + 1) * pageSize >= data.length) setPage(page + 1);
   };
 
-  return { order, paginatedData, loadMore };
+  return { paginatedData, loadMore };
 };

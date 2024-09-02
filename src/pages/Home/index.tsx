@@ -6,8 +6,8 @@ import { Routes } from "Router";
 import HomeView from "./view";
 
 export enum Warning {
-  INPUT_EMPTY = "Order Number or Zip Code can't be empty",
-  ORDER_NOT_FOUND = "Order couldn't be found. Please try again.",
+  INPUT_EMPTY = "Order Number or Zip Code can't be empty!",
+  ORDER_NOT_FOUND = "Order couldn't be found. Please try again!",
 }
 
 const Home = () => {

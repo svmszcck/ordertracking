@@ -1,10 +1,14 @@
+import { useContext } from "react";
+
 import { progress, parseDate } from "utils/data";
 import { Order } from "services/types/Order";
 import { Button, Typography } from "components";
 import { usePagination } from "hooks/usePagination";
+import { OrderContext } from "contexts/orderContext";
 
 const Shipment = () => {
-  const { order, loadMore, paginatedData } = usePagination();
+  const { order } = useContext(OrderContext);
+  const { loadMore, paginatedData } = usePagination(order?.checkpoints, 3);
 
   return order ? (
     <div className="shipment">
