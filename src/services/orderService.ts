@@ -22,7 +22,7 @@ export const getOrder = async (
         item.tracking_number === orderNumber && item.zip_code === zipCode
     );
 
-    await delay(1000);
+    await delay(500);
 
     if (!order) throw new Error(API_ERRORS.ORDER_EMPTY);
 

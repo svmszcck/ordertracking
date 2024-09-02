@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getOrder } from "services/orderService";
@@ -16,7 +16,7 @@ const Home = () => {
   const [warning, showWarning] = useState<Warning>();
   const navigate = useNavigate();
 
-  const signIn = async () => {
+  const signIn = useCallback(async () => {
     if (!orderNumber || !zipCode) {
       showWarning(Warning.INPUT_EMPTY);
       return;
@@ -31,8 +31,10 @@ const Home = () => {
       return;
     }
 
-    navigate(`${Routes.ORDER}/${orderNumber}/?zip=${zipCode}`);
-  };
+    navigate(`${Routes.ORDER}/${orderNumber}/?zip=${zipCode}`, {
+      state: order,
+    });
+  }, [navigate, orderNumber, zipCode]);
 
   return (
     <HomeView

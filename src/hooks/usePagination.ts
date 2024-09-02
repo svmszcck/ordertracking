@@ -2,10 +2,12 @@ import { useState, useMemo } from "react";
 
 import { paginate } from "utils/data";
 
-export const usePagination = (
+type usePaginationType = (
   data: unknown[] | undefined,
-  pageSize: number = 3
-) => {
+  pageSize?: number
+) => { paginatedData: unknown[]; loadMore: () => void };
+
+export const usePagination: usePaginationType = (data, pageSize = 3) => {
   const [page, setPage] = useState(1);
 
   const paginatedData = useMemo(
