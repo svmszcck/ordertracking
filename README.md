@@ -43,7 +43,7 @@ It will fetch the order with id of **3**.
 
 - There are unused propertes in the Order data. They should be eliminated with a parser function to reduce the memory usage. For example email, recipient, recipient_notification properties aren't used at the moment. I haven't done that to make the app scalable(those unused properties can be used in the future).
 
-- UI & UX can be improved. For example card contents are scrollable if they are overflowing. It is a little bit challenging to scroll especially on the mobile devices as there isn't enough space on the screen and while scrolling on the main page card contents are also being scrolled(also vice versa). That's a bad UX and it should be handled properly(by arranging the scroll sensitivity or adjusting the spaces on the screen).
+- UI & UX can be improved. For example card contents are scrollable if they are overflowing. It is a little bit challenging to scroll especially on the mobile devices as there isn't enough space on the screen and while scrolling on the main page card contents are also being scrolled(also vice versa). That's a bad UX and it should be handled properly(by arranging the scroll sensitivity or adjusting the spaces on the screen). Also there should be a loading indicator on the home screen when the order data is checked(If API is too slow it may affect the UX in a bad way).
 
 - Risks with the current solution in terms of business vaulue and UX: There are some external dependencies and it is not easy to isolate the Order Status view if we want to use it in a different project & platform. It should be as lean as possible and we should be able to use it as a plugin in another environment.
 
