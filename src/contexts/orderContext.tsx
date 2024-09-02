@@ -11,9 +11,9 @@ type OrderState = {
 
 const orderState: OrderState = {
   order: null,
-  setOrder: (data: Order | null) => {},
+  setOrder: () => {},
   loading: true,
-  setLoading: (value: boolean) => {},
+  setLoading: () => {},
 };
 
 export const OrderContext = React.createContext(orderState);
