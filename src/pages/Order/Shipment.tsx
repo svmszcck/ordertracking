@@ -12,7 +12,7 @@ const Shipment = () => {
 
   return order ? (
     <div className="shipment">
-      <Typography tag="h5" className="title">
+      <Typography tag="h5" className="title" bold>
         Shipping updates
       </Typography>
       <progress

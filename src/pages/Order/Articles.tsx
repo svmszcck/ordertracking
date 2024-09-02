@@ -14,7 +14,7 @@ const Articles = () => {
 
   return order ? (
     <div className="articles">
-      <Typography tag="h5" className="title">
+      <Typography tag="h5" className="title" bold>
         Articles
       </Typography>
       {(paginatedData as Order["delivery_info"]["articles"]).map((article) => (
