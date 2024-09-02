@@ -3,7 +3,7 @@ import { createBrowserRouter, useNavigate, Outlet } from "react-router-dom";
 
 import { Header } from "components";
 import { Home, Order } from "pages";
-import { OrderContext, OrderContextProvider } from "contexts/orderContext";
+import { OrderContext } from "contexts/orderContext";
 
 export const enum Routes {
   HOME = "/",

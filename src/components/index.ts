@@ -5,3 +5,4 @@ export { default as Typography } from "./Typography";
 export { default as Image } from "./Image";
 export { default as Header } from "./Header";
 export { default as Loader } from "./Loader";
+export { default as ErrorBoundary } from "./ErrorBoundary";

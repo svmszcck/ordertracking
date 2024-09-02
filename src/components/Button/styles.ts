@@ -45,6 +45,7 @@ const Styled = styled.button<StyledProps>`
   cursor: pointer;
   width: ${(props) => (props.$fullWidth ? "100%" : "auto")};
   height: 2.5rem;
+  padding: 0 0.8rem;
   border: none;
   border-radius: 8px;
   font-weight: bold;
