@@ -1,5 +1,4 @@
 import { Button, Image, Typography } from "components";
-import { Routes } from "Router";
 import Cat from "images/cat.png";
 import Styled from "./styles";
 
