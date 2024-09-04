@@ -20,6 +20,7 @@ const Input: FC<InputProps> = ({ label, value, onChange }) => {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         data-testid="text-input"
+        aria-label={label}
       />
     </Styled>
   );

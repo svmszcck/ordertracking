@@ -40,6 +40,7 @@ const Articles = () => {
           className="load-more"
           text="More"
           variant="plain"
+          ariaLabel="load more"
         />
       )}
     </div>

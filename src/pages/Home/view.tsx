@@ -51,7 +51,12 @@ const HomeView: FC<HomeViewProps> = ({
 
           <hr className="divider" color={Colors.GRAY_DARK}></hr>
 
-          <Button text="Track" onClick={signIn} $fullWidth />
+          <Button
+            text="Track"
+            onClick={signIn}
+            $fullWidth
+            ariaLabel="track order"
+          />
         </Card>
       </div>
     </Styled>

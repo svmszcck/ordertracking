@@ -15,6 +15,7 @@ const Header = ({ signOut }: HeaderProps) => {
         onClick={signOut}
         variant="outline"
         className="sign-out"
+        ariaLabel="sign out"
       />
     </Styled>
   );

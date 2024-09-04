@@ -14,6 +14,7 @@ const ErrorUI = () => {
           text="Go to Home"
           className="navigate"
           onClick={() => (window.location.href = "/")}
+          ariaLabel="go to home"
         />
       </div>
     </Styled>
