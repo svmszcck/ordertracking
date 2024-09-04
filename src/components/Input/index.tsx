@@ -7,9 +7,10 @@ type InputProps = {
   label: string;
   value: string;
   onChange: (value: string) => void;
+  required?: boolean;
 };
 
-const Input: FC<InputProps> = ({ label, value, onChange }) => {
+const Input: FC<InputProps> = ({ label, value, onChange, required }) => {
   return (
     <Styled>
       <Typography tag="p" className="label">
@@ -21,6 +22,7 @@ const Input: FC<InputProps> = ({ label, value, onChange }) => {
         onChange={(e) => onChange(e.target.value)}
         data-testid="text-input"
         aria-label={label}
+        aria-required={required}
       />
     </Styled>
   );

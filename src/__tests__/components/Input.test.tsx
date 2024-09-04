@@ -7,7 +7,14 @@ describe("Input Component", () => {
   it("handles state changes correctly", async () => {
     const onChange = jest.fn();
 
-    render(<Input label="Blablabla" onChange={onChange} value="input value" />);
+    render(
+      <Input
+        label="Blablabla"
+        onChange={onChange}
+        value="input value"
+        required
+      />
+    );
 
     expect(screen.getByText("Blablabla")).toBeTruthy();
 

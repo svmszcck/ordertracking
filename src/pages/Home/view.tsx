@@ -40,8 +40,14 @@ const HomeView: FC<HomeViewProps> = ({
             label="Order Number"
             onChange={setOrderNumber}
             value={orderNumber || ""}
+            required
           />
-          <Input label="Zip Code" onChange={setZipCode} value={zipCode || ""} />
+          <Input
+            label="Zip Code"
+            onChange={setZipCode}
+            value={zipCode || ""}
+            required
+          />
 
           {warning && (
             <Typography tag="p" className="warning">
