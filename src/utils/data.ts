@@ -29,5 +29,8 @@ export const isDate = (date: string): boolean => {
 export const parseDate = (date: string): string | undefined => {
   if (!isDate(date)) return;
 
-  return new Date(date).toLocaleString();
+  return new Date(date).toLocaleString([], {
+    dateStyle: "short",
+    timeStyle: "short",
+  });
 };
