@@ -86,18 +86,6 @@ const Styled = styled.div`
         flex-direction: column;
         padding: 2rem;
 
-        .progress {
-          width: 100%;
-          height: 1.5rem;
-          accent-color: ${Colors.PRIMARY};
-        }
-
-        .progress-footer {
-          ${subInfo}
-          margin-top: -0.8rem;
-          opacity: 0.5;
-        }
-
         .checkpoint {
           margin-bottom: 2rem;
 

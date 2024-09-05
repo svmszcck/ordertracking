@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { progress, parseDate } from "utils/data";
 import { Order } from "services/types/Order";
-import { Button, Typography } from "components";
+import { Button, Progress, Typography } from "components";
 import { usePagination } from "hooks/usePagination";
 import { OrderContext } from "contexts/orderContext";
 
@@ -15,19 +15,9 @@ const Shipment = () => {
       <Typography tag="h5" className="title" bold>
         Shipping updates
       </Typography>
-      <progress
+      <Progress
         value={progress((paginatedData as Order["checkpoints"])[0].status)}
-        max="100"
-        className="progress"
       />
-      <div className="progress-footer">
-        <Typography tag="p" pale>
-          Processed
-        </Typography>
-        <Typography tag="p" pale>
-          Delivered
-        </Typography>
-      </div>
 
       {(paginatedData as Order["checkpoints"]).map((checkpoint) => (
         <div className="checkpoint" key={checkpoint.event_timestamp}>
