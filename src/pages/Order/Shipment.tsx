@@ -17,6 +17,8 @@ const Shipment = () => {
       </Typography>
       <Progress
         value={progress((paginatedData as Order["checkpoints"])[0].status)}
+        startText="Processed"
+        endText="Delivered"
       />
 
       {(paginatedData as Order["checkpoints"]).map((checkpoint) => (

@@ -6,9 +6,16 @@ import Styled from "./styles";
 type ProgressProps = {
   value: number;
   maxValue?: number;
+  startText?: string;
+  endText?: string;
 };
 
-const Progress: FC<ProgressProps> = ({ value, maxValue = 100 }) => {
+const Progress: FC<ProgressProps> = ({
+  value,
+  maxValue = 100,
+  startText,
+  endText,
+}) => {
   return (
     <Styled>
       <progress
@@ -20,14 +27,16 @@ const Progress: FC<ProgressProps> = ({ value, maxValue = 100 }) => {
         aria-valuenow={value}
         aria-valuemax={maxValue}
       />
-      <div className="progress-footer">
-        <Typography tag="p" pale>
-          Processed
-        </Typography>
-        <Typography tag="p" pale>
-          Delivered
-        </Typography>
-      </div>
+      {startText && endText && (
+        <div className="progress-footer" data-testid="progress-footer">
+          <Typography tag="p" pale>
+            {startText}
+          </Typography>
+          <Typography tag="p" pale>
+            {endText}
+          </Typography>
+        </div>
+      )}
     </Styled>
   );
 };
