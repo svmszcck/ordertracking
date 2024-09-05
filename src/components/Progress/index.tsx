@@ -16,6 +16,9 @@ const Progress: FC<ProgressProps> = ({ value, maxValue = 100 }) => {
         max={maxValue}
         className="progress"
         data-testid="progress"
+        aria-label="Order Delivery Progress"
+        aria-valuenow={value}
+        aria-valuemax={maxValue}
       />
       <div className="progress-footer">
         <Typography tag="p" pale>
