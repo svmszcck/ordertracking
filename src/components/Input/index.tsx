@@ -9,6 +9,7 @@ type InputProps = {
   onChange: (value: string) => void;
   required?: boolean;
   ariaErrorMsg?: string;
+  tabIndex?: number;
 };
 
 const Input: FC<InputProps> = ({
@@ -17,6 +18,7 @@ const Input: FC<InputProps> = ({
   onChange,
   required,
   ariaErrorMsg,
+  tabIndex,
 }) => {
   return (
     <Styled>
@@ -31,6 +33,7 @@ const Input: FC<InputProps> = ({
         aria-label={label}
         aria-required={required}
         aria-errormessage={ariaErrorMsg}
+        tabIndex={tabIndex}
       />
     </Styled>
   );

@@ -11,6 +11,7 @@ type ButtonProps = {
   variant?: ButtonVariants;
   $fullWidth?: boolean;
   ariaLabel?: string;
+  tabIndex?: number;
 };
 
 const Button = ({
@@ -20,6 +21,7 @@ const Button = ({
   text,
   $fullWidth,
   ariaLabel,
+  tabIndex,
 }: ButtonProps) => {
   return (
     <Styled
@@ -29,6 +31,7 @@ const Button = ({
       data-testid="custom-button"
       aria-label={ariaLabel}
       $fullWidth={$fullWidth}
+      tabIndex={tabIndex}
     >
       <span>{text}</span>
     </Styled>

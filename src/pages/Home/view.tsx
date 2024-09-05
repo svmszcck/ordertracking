@@ -42,6 +42,7 @@ const HomeView: FC<HomeViewProps> = ({
             value={orderNumber || ""}
             aria-invalid={Boolean(warning !== undefined)}
             ariaErrorMsg="form-warning"
+            tabIndex={1}
             required
           />
           <Input
@@ -50,6 +51,7 @@ const HomeView: FC<HomeViewProps> = ({
             value={zipCode || ""}
             aria-invalid={Boolean(warning !== undefined)}
             ariaErrorMsg="form-warning"
+            tabIndex={2}
             required
           />
 
@@ -66,6 +68,7 @@ const HomeView: FC<HomeViewProps> = ({
             onClick={signIn}
             $fullWidth
             ariaLabel="track order"
+            tabIndex={3}
           />
         </Card>
       </div>
