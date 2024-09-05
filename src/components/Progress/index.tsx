@@ -11,7 +11,12 @@ type ProgressProps = {
 const Progress: FC<ProgressProps> = ({ value, maxValue = 100 }) => {
   return (
     <Styled>
-      <progress value={value} max={maxValue} className="progress" />
+      <progress
+        value={value}
+        max={maxValue}
+        className="progress"
+        data-testid="progress"
+      />
       <div className="progress-footer">
         <Typography tag="p" pale>
           Processed
