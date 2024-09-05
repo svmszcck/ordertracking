@@ -14,6 +14,7 @@ export type TagVariants =
 
 type TypographyProps = {
   tag?: TagVariants;
+  id?: string;
   className?: string;
   children: ReactNode;
   pale?: boolean;
@@ -22,6 +23,7 @@ type TypographyProps = {
 
 const Typography = ({
   tag = "p",
+  id,
   className,
   children,
   pale,
@@ -29,7 +31,7 @@ const Typography = ({
   ...props
 }: TypographyProps & CSSProperties) => {
   return (
-    <Styled tag={tag} className={className} pale={pale} bold={bold}>
+    <Styled tag={tag} className={className} pale={pale} bold={bold} id={id}>
       {children}
     </Styled>
   );

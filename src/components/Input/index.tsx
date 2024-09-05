@@ -8,9 +8,16 @@ type InputProps = {
   value: string;
   onChange: (value: string) => void;
   required?: boolean;
+  ariaErrorMsg?: string;
 };
 
-const Input: FC<InputProps> = ({ label, value, onChange, required }) => {
+const Input: FC<InputProps> = ({
+  label,
+  value,
+  onChange,
+  required,
+  ariaErrorMsg,
+}) => {
   return (
     <Styled>
       <Typography tag="p" className="label">
@@ -23,6 +30,7 @@ const Input: FC<InputProps> = ({ label, value, onChange, required }) => {
         data-testid="text-input"
         aria-label={label}
         aria-required={required}
+        aria-errormessage={ariaErrorMsg}
       />
     </Styled>
   );

@@ -40,17 +40,21 @@ const HomeView: FC<HomeViewProps> = ({
             label="Order Number"
             onChange={setOrderNumber}
             value={orderNumber || ""}
+            aria-invalid={Boolean(warning !== undefined)}
+            ariaErrorMsg="form-warning"
             required
           />
           <Input
             label="Zip Code"
             onChange={setZipCode}
             value={zipCode || ""}
+            aria-invalid={Boolean(warning !== undefined)}
+            ariaErrorMsg="form-warning"
             required
           />
 
           {warning && (
-            <Typography tag="p" className="warning">
+            <Typography tag="p" className="warning" id="form-warning">
               {warning}
             </Typography>
           )}

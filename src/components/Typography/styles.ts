@@ -6,6 +6,7 @@ import type { TagVariants } from ".";
 type StyledProps = {
   tag: TagVariants;
   children: ReactNode;
+  id?: string;
   className?: string;
   pale?: boolean;
   bold?: boolean;
@@ -48,8 +49,8 @@ function parseTypographyStyle(tag: TagVariants) {
   }
 }
 
-const Styled = styled(({ tag, children, className }: StyledProps) =>
-  createElement(tag, { className }, children)
+const Styled = styled(({ tag, children, id, className }: StyledProps) =>
+  createElement(tag, { id, className }, children)
 )`
   ${({ tag }) => parseTypographyStyle(tag)}
   font-weight: ${({ bold }) => (bold ? 500 : "inherit")};
