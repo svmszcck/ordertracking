@@ -1,4 +1,4 @@
-enum colors {
+enum Colors {
   PRIMARY = "#152978",
   SECONDARY = "#E5F0FD",
   WHITE = "#ffffff",
@@ -9,4 +9,4 @@ enum colors {
   RED = "#E55555",
 }
 
-export default colors;
+export default Colors;
