@@ -8,7 +8,7 @@ import router from "./Router";
 
 function App() {
   return (
-    <ErrorBoundary fallback={<ErrorUI />}>
+    <ErrorBoundary fallback={<ErrorUI targetRoute="/" />}>
       <GlobalStyle />
       <OrderContextProvider>
         <RouterProvider router={router} />
