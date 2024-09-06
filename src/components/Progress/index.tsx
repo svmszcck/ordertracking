@@ -8,6 +8,7 @@ type ProgressProps = {
   maxValue?: number;
   startText?: string;
   endText?: string;
+  ariaLabel?: string;
 };
 
 const Progress: FC<ProgressProps> = ({
@@ -15,6 +16,7 @@ const Progress: FC<ProgressProps> = ({
   maxValue = 100,
   startText,
   endText,
+  ariaLabel,
 }) => {
   return (
     <Styled>
@@ -23,7 +25,7 @@ const Progress: FC<ProgressProps> = ({
         max={maxValue}
         className="progress"
         data-testid="progress"
-        aria-label="Order Delivery Progress"
+        aria-label={ariaLabel}
         aria-valuenow={value}
         aria-valuemax={maxValue}
       />

@@ -6,7 +6,13 @@ import { Progress } from "components";
 describe("Progress Component", () => {
   it("renders the component correctly", async () => {
     render(
-      <Progress value={40} maxValue={100} startText="Foo" endText="Foo 2" />
+      <Progress
+        value={40}
+        maxValue={100}
+        startText="Foo"
+        endText="Foo 2"
+        ariaLabel="Blablabla"
+      />
     );
 
     const element = screen.getByTestId("progress");

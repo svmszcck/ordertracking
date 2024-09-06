@@ -19,6 +19,7 @@ const Shipment = () => {
         value={progress((paginatedData as Order["checkpoints"])[0].status)}
         startText="Processed"
         endText="Delivered"
+        ariaLabel="Order Delivery Progress"
       />
 
       {(paginatedData as Order["checkpoints"]).map((checkpoint) => (
