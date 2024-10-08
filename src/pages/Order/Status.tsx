@@ -9,9 +9,9 @@ const Status = () => {
   const checkpoint = order?.checkpoints[0];
 
   return order ? (
-    <div className="status">
-      <div className="info">
-        <Typography tag="h1" className="title" bold>
+    <div className="order__status">
+      <div className="order__status-info">
+        <Typography tag="h1" className="order__title" bold>
           {checkpoint?.status}
         </Typography>
         <Typography tag="h4" bold>
@@ -19,13 +19,13 @@ const Status = () => {
         </Typography>
       </div>
       {checkpoint?.meta?.pickup_address_map_url && (
-        <div className="map-wrapper">
+        <div className="order__map">
           <img
             src={checkpoint.meta?.pickup_address_map_url}
             alt="Pickup Map URL"
-            className="map"
+            className="order__map-content"
           />
-          <Typography tag="p" className="location">
+          <Typography tag="p" className="order__map-location">
             {checkpoint.meta?.pickup_address}
           </Typography>
 
@@ -33,7 +33,7 @@ const Status = () => {
             href={checkpoint.meta.pickup_address_link}
             target="_blank"
             rel="noreferrer"
-            className="action"
+            className="order__map-action"
           >
             <div>
               <Typography tag="span" bold>

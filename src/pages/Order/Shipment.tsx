@@ -11,8 +11,8 @@ const Shipment = () => {
   const { loadMore, paginatedData } = usePagination(order?.checkpoints, 3);
 
   return order ? (
-    <div className="shipment">
-      <Typography tag="h5" className="title" bold>
+    <div className="order__shipment">
+      <Typography tag="h5" className="order__title" bold>
         Shipping updates
       </Typography>
       <Progress
@@ -23,12 +23,12 @@ const Shipment = () => {
       />
 
       {(paginatedData as Order["checkpoints"]).map((checkpoint) => (
-        <div className="checkpoint" key={checkpoint.event_timestamp}>
+        <div className="order__checkpoint" key={checkpoint.event_timestamp}>
           <Typography tag="p">{checkpoint.status}</Typography>
           <Typography tag="p" pale>
             {checkpoint.status_details}
           </Typography>
-          <div className="checkpoint-footer">
+          <div className="order__checkpoint-footer">
             <Typography tag="span" pale bold>
               {checkpoint.city}
             </Typography>

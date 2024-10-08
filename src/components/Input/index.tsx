@@ -22,13 +22,14 @@ const Input: FC<InputProps> = ({
 }) => {
   return (
     <Styled>
-      <Typography tag="p" className="label">
+      <Typography tag="p" className="input__label">
         {label}
       </Typography>
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        className="input__text"
         data-testid="text-input"
         aria-label={label}
         aria-required={required}

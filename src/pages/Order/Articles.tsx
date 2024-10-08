@@ -13,18 +13,18 @@ const Articles = () => {
   );
 
   return order ? (
-    <div className="articles">
-      <Typography tag="h5" className="title" bold>
+    <div className="order__articles">
+      <Typography tag="h5" className="order__title" bold>
         Articles
       </Typography>
       {(paginatedData as Order["delivery_info"]["articles"]).map((article) => (
-        <div className="article" key={article.articleNo}>
+        <div className="order__article" key={article.articleNo}>
           <Image
             src={article.articleImageUrl}
             alt="Article Image"
-            className="article-img"
+            className="order__article-img"
           />
-          <div className="article-info">
+          <div className="order__article-info">
             <Typography tag="p">{article.articleName}</Typography>
             <Typography tag="p" pale>
               Article number: {article.articleNo}

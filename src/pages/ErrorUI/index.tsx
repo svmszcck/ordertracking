@@ -11,14 +11,14 @@ type ErrorUIProps = {
 const ErrorUI: FC<ErrorUIProps> = ({ targetRoute = "/" }) => {
   return (
     <Styled>
-      <div className="wrapper">
-        <Typography tag="h4" className="title" bold>
+      <div className="error">
+        <Typography tag="h4" className="error__title" bold>
           Somehing is wrong, please try again...
         </Typography>
-        <Image src={Cat} className="vector" />
+        <Image src={Cat} className="error__vector" />
         <Button
           text="Go to Home"
-          className="navigate"
+          className="error__navigate"
           onClick={() => (window.location.href = targetRoute)}
           ariaLabel="go to home"
         />

@@ -6,11 +6,11 @@ const Styled = styled.div`
   display: flex;
   flex-direction: column;
 
-  .label {
+  .input__label {
     font-weight: bold;
   }
 
-  input[type="text"] {
+  .input__text {
     background-color: ${Colors.GRAY};
     border-radius: 10px;
     border: 2px solid ${Colors.GRAY_DARK};

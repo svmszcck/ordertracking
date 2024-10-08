@@ -25,10 +25,10 @@ const HomeView: FC<HomeViewProps> = ({
 }) => {
   return (
     <Styled>
-      <div className="form-wrapper">
-        <img src={Logo} width={70} alt="logo" className="logo" />
-        <Card className="form">
-          <div className="form-info">
+      <div className="form">
+        <img src={Logo} width={70} alt="logo" className="form__logo" />
+        <Card className="form__content">
+          <div className="form__info">
             <Typography tag="h5">Track your order</Typography>
             <Typography tag="span" pale>
               Enter your order number and zip code combination to see the order
@@ -56,12 +56,12 @@ const HomeView: FC<HomeViewProps> = ({
           />
 
           {warning && (
-            <Typography tag="p" className="warning" id="form-warning">
+            <Typography tag="p" className="form__warning" id="form-warning">
               {warning}
             </Typography>
           )}
 
-          <hr className="divider" color={Colors.GRAY_DARK}></hr>
+          <hr className="form__divider" color={Colors.GRAY_DARK}></hr>
 
           <Button
             text="Track"

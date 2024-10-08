@@ -6,7 +6,7 @@ import Colors from "constants/colors";
 const Styled = styled.div`
   padding: 0 2rem 2rem 2rem;
 
-  .wrapper {
+  .order {
     display: grid;
     margin-top: 3rem;
     grid-gap: 1.5rem;
@@ -21,111 +21,115 @@ const Styled = styled.div`
     @media ${device.lg} {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
 
-    .order-card {
-      max-height: 38rem;
-      overflow-y: auto;
+  .order__card {
+    max-height: 38rem;
+    overflow-y: auto;
+  }
 
-      .title {
-        margin-top: 0;
-        margin-bottom: 1rem;
-      }
+  .order__title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 
-      .status {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+  // Order Status Styles
+  .order__status {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-        .info {
-          padding: 2rem;
-        }
+  .order__status-info {
+    padding: 2rem;
+  }
 
-        .map-wrapper {
-          position: relative;
-          margin-top: auto;
+  .order__map {
+    position: relative;
+    margin-top: auto;
+  }
 
-          .map {
-            width: 100%;
-          }
+  .order__map-content {
+    width: 100%;
+  }
 
-          .location {
-            position: absolute;
-            max-width: 10rem;
-            top: 0;
-            right: 1rem;
-            font-weight: bold;
-            font-size: 0.8rem;
-            word-break: break-all;
-          }
+  .order__map-location {
+    position: absolute;
+    max-width: 10rem;
+    top: 0;
+    right: 1rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
 
-          .action {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 5rem;
-            background-color: ${Colors.PRIMARY};
-            color: ${Colors.WHITE};
-            text-decoration: none;
+  .order__map-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: ${Colors.PRIMARY};
+    color: ${Colors.WHITE};
+    text-decoration: none;
 
-            &:hover {
-              opacity: 0.9;
-            }
+    &:hover {
+      opacity: 0.9;
+    }
 
-            &:focus-visible {
-              background-color: ${Colors.SECONDARY};
-              color: ${Colors.BLACK};
-              outline-color: transparent;
-              text-decoration: underline;
-            }
-          }
-        }
-      }
+    &:focus-visible {
+      background-color: ${Colors.SECONDARY};
+      color: ${Colors.BLACK};
+      outline-color: transparent;
+      text-decoration: underline;
+    }
+  }
 
-      .shipment {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
+  // Order Shipment Styles
+  .order__shipment {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
 
-        .checkpoint {
-          margin-bottom: 2rem;
+  .order__checkpoint {
+    margin-bottom: 2rem;
 
-          p {
-            margin: 0.5rem 0;
-          }
+    p {
+      margin: 0.5rem 0;
+    }
+  }
 
-          .checkpoint-footer {
-            ${subInfo}
-          }
-        }
-      }
+  .order__checkpoint-footer {
+    ${subInfo}
+  }
 
-      .articles {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
+  // Order Article Styles
 
-        .article {
-          display: flex;
-          margin-bottom: 1rem;
+  .order__articles {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
 
-          .article-img {
-            width: 5em;
-            height: 4rem;
-            margin-right: 1rem;
-            border-radius: 5px;
+  .order__article {
+    display: flex;
+    margin-bottom: 1rem;
+  }
 
-            &:hover {
-              opacity: 0.7;
-            }
-          }
+  .order__article-info {
+    p {
+      margin: 0 0 0.3rem 0;
+    }
+  }
 
-          .article-info {
-            p {
-              margin: 0 0 0.3rem 0;
-            }
-          }
-        }
-      }
+  .order__article-img {
+    width: 5em;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 `;

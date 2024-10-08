@@ -5,26 +5,26 @@ import Colors from "constants/colors";
 const Styled = styled.div`
   padding: 2rem;
 
-  .wrapper {
+  .error {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1;
     text-align: center;
+  }
 
-    .title {
-      color: ${Colors.PRIMARY};
-    }
+  .error__title {
+    color: ${Colors.PRIMARY};
+  }
 
-    .vector {
-      max-height: 20rem;
-      margin-top: 2rem;
-    }
+  .error__vector {
+    max-height: 20rem;
+    margin-top: 2rem;
+  }
 
-    .navigate {
-      margin-top: 2rem;
-    }
+  .error__navigate {
+    margin-top: 2rem;
   }
 `;
 

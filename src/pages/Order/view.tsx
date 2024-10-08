@@ -8,14 +8,14 @@ import Styled from "./styles";
 const Order = () => {
   return (
     <Styled>
-      <div className="wrapper">
-        <Card className="order-card">
+      <div className="order">
+        <Card className="order__card">
           <Status />
         </Card>
-        <Card className="order-card">
+        <Card className="order__card">
           <Shipment />
         </Card>
-        <Card className="order-card">
+        <Card className="order__card">
           <Articles />
         </Card>
       </div>
